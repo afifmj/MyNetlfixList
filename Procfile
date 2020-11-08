@@ -1,0 +1,1 @@
+web: gunicorn MyNetflixList.wsgi --log-file -
