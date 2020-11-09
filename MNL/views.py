@@ -6,7 +6,7 @@ from .models import Anime
 
 
 def index(request):
-    context = {'anime': Anime.objects.all()}
+    context = {'anime': Anime.objects.order_by('-score')}
     return render(request, 'index2.html', context)
     #return HttpResponse("Hello, world. You're at the MyNetflix list index.")
 

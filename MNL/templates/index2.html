@@ -10,13 +10,14 @@
   <div>
     <a href="https://fontmeme.com/netflix-font/"><img src="https://fontmeme.com/permalink/201108/b9b884f4dd887cc32894b46ca24ea5d6.png" alt="netflix-font" border="0"></a></div>
 <h1><span class="blue">&lt;</span>The Netflix and MAL fusion you deserve<span class="blue">&gt;</span> <span class="yellow"> </pan></h1>
-    <h2>Created by <a href="http://pablogarciafernandez.com" target="_blank">Sir Wellesley</a></h2>
+    <h2>Created by Sir Wellesley</a></h2>
     <!-- Search form -->
 
     <table class="container">
         <thead>
             <tr>
                 <th><h1>Name</h1></th>
+                <th><h1>Score</h1></th>
                 <th><h1>Image</h1></th>
                 <th><h1>Synopsis</h1></th>
                 <th><h1>MAL Link</h1></th>
@@ -26,12 +27,10 @@
             {% for a in anime %}
             <tr>
             <td>{{ a.anime_name }}</td>
-            <!-- <td>{{ a.image_url }}</td> -->
+            <td>{{ a.score }}</td>
             <td><img src="{{ a.image_url }}" width="100px" height="100px" /></td>
-            <!-- <td><img src="{{ a.image_url }}" class="rounded float-left" width="250px" height="250px" /></td> -->
             <td style="width:1000px">{{ a.synopsis }}</td>
             <td><a href="{{ a.url }}" color = "#FB667A">Take me to MAL!</a></td>
-            <!-- <td>{{ a.url }}$</td> -->
             </tr>
             {% endfor %}
         </tbody>

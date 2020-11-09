@@ -48,7 +48,7 @@ class Command(BaseCommand):
                     try:
 
                         search_result = jikan.search('anime', s)
-                        p = Anime(anime_name = s, synopsis = search_result['results'][0]['synopsis'], url = search_result['results'][0]['url'], image_url = search_result['results'][0]['image_url'])
+                        p = Anime(anime_name = s, score = search_result['results'][0]['score'],synopsis = search_result['results'][0]['synopsis'], url = search_result['results'][0]['url'], image_url = search_result['results'][0]['image_url'])
                         p.save()
                         print('%s added' % (s))
                         count +=1
